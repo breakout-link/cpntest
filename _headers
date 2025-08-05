@@ -1,0 +1,70 @@
+# Cloudflare Pages headers for optimal performance and security
+
+# Cache static assets for a long time
+/wp-content/uploads/*
+  Cache-Control: public, max-age=31536000, immutable
+  
+/wp-content/themes/*
+  Cache-Control: public, max-age=31536000, immutable
+  
+/wp-includes/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache CSS and JS files
+*.css
+  Cache-Control: public, max-age=31536000, immutable
+  
+*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache images
+*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+  
+*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+  
+*.png
+  Cache-Control: public, max-age=31536000, immutable
+  
+*.gif
+  Cache-Control: public, max-age=31536000, immutable
+  
+*.webp
+  Cache-Control: public, max-age=31536000, immutable
+  
+*.avif
+  Cache-Control: public, max-age=31536000, immutable
+  
+*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache fonts
+*.ttf
+  Cache-Control: public, max-age=31536000, immutable
+  
+*.otf
+  Cache-Control: public, max-age=31536000, immutable
+  
+*.woff
+  Cache-Control: public, max-age=31536000, immutable
+  
+*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+  
+*.eot
+  Cache-Control: public, max-age=31536000, immutable
+
+# Security headers for HTML pages
+/*.html
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Root index.html
+/
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
